@@ -15,6 +15,8 @@ RUN wget https://nginx.org/download/nginx-1.18.0.tar.gz && \
 
 RUN adduser --system --no-create-home --disabled-login --disabled-password --group nginx
 
+RUN ["mkdir", "/var/log/nginx"]
+
 WORKDIR /
 
 EXPOSE 443

@@ -6,6 +6,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./data/nginx-terminate:/etc/nginx/conf.d
+      - ./data/logs/nginx-terminate:/var/log/nginx
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
     ports:
@@ -17,6 +18,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./data/nginx-relay:/etc/nginx/conf.d
+      - ./data/logs/nginx-relay:/var/log/nginx
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; /opt/nginx/sbin/nginx -s reload; done & /opt/nginx/sbin/nginx -c /etc/nginx/conf.d/nginx.conf -g \"daemon off;\"'"
   certbot:
     image: certbot/certbot
