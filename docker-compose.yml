@@ -2,12 +2,11 @@ version: '3'
 
 services:
   # nginx-test:
-  #   build: ./nginx-test/
+  #   build: ./nginx-terminate/
   #   restart: unless-stopped
   #   volumes:
   #     - ./data/GeoLite2-Country.mmdb:/var/lib/GeoIP/GeoLite2-Country.mmdb
-  #     - ./data/nginx-test:/etc/nginx/conf.d
-  #     - ./data/logs/nginx-test:/var/log/nginx
+  #     - ./data/nginx-terminate:/etc/nginx/conf.d
   #   ports:
   #     - "8000:80"
   #   command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; /opt/nginx/objs/nginx -s reload; done & /opt/nginx/objs/nginx -c /etc/nginx/conf.d/nginx.conf -g \"daemon off;\"'"

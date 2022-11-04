@@ -19,3 +19,9 @@ git pull
 docker-compose down
 docker-compose up --detach
 ```
+
+## Links
+
+- Adding GeoIP: https://sabbir.dev/article/deploy-geo-restriced-service-with-nginx-geoip2-and-docker/
+- https://github.com/leev/ngx_http_geoip2_module
+- https://dev.to/rdamrong/how-to-compile-geoip2-dynamic-module-for-nginx-open-source-that-installed-in-ubuntu-20-04-lts-5geb
